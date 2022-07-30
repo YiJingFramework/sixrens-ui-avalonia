@@ -6,7 +6,7 @@ namespace SixRens.UI.Avalonia.Views
     {
         public MainWindow()
         {
-            InitializeComponent();
+            this.InitializeComponent();
         }
     }
 }
