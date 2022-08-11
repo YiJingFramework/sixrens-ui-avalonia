@@ -26,11 +26,22 @@ namespace SixRens.UI.Avalonia
             return new FileInfo(path);
         }
 
-        public void 储存插件包文件(string 插件包名, Stream 插件包)
+
+        public string 储存插件包文件(Stream 插件包)
         {
-            var file = this.从插件包名获取文件(插件包名);
+            var name = this.生成新的插件包文件名();
+            var file = this.从插件包名获取文件(name);
             using var f = file.Open(FileMode.Create);
             插件包.CopyTo(f);
+            return name;
+        }
+
+        public Stream? 获取插件包文件(string 插件包本地识别码)
+        {
+            var file = this.从插件包名获取文件(插件包本地识别码);
+            if (file.Exists)
+                return file.Open(FileMode.Open);
+            return null;
         }
 
         public string 生成新的插件包文件名()
@@ -51,7 +62,7 @@ namespace SixRens.UI.Avalonia
             file.Delete();
         }
 
-        public IEnumerable<(string 插件包文件名, Stream 插件包)> 获取所有插件包文件()
+        public IEnumerable<(string 插件包本地识别码, Stream 插件包)> 获取所有插件包文件()
         {
             return this._directory.EnumerateFiles()
                 .Where(file => file.Name.StartsWith(_prefixPluginPackage))
