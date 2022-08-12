@@ -2,6 +2,7 @@ using Avalonia.Controls;
 using Avalonia.Interactivity;
 using SixRens.Core.Õ¼Àý´æÈ¡;
 using SixRens.UI.Avalonia.Services.SixRens;
+using SixRens.UI.Avalonia.ViewModels;
 using System;
 using System.IO;
 using System.Linq;
@@ -9,11 +10,11 @@ using System.Threading.Tasks;
 
 namespace SixRens.UI.Avalonia.Views
 {
-    public partial class MainWindow : Window
+    public partial class MainWindow : WindowBase<MainWindowViewModel>
     {
         private readonly SixRensCore sixRensCore;
 
-        public MainWindow()
+        public MainWindow() : base(new MainWindowViewModel())
         {
             this.InitializeComponent();
 
