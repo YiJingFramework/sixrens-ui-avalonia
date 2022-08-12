@@ -1,16 +1,17 @@
 using Avalonia;
 using Avalonia.Controls;
 using Avalonia.Markup.Xaml;
-using System.Collections.Generic;
 
-namespace SixRens.UI.Avalonia.ViewModels.Main
+namespace SixRens.UI.Avalonia.Views.CaseCreationWindow
 {
-    public partial class TianPan : UserControl
+    public partial class CaseCreationWindow : Window
     {
-        public List<string> ClockWiseString;
-        public TianPan()
+        public CaseCreationWindow()
         {
             InitializeComponent();
+#if DEBUG
+            this.AttachDevTools();
+#endif
         }
 
         private void InitializeComponent()

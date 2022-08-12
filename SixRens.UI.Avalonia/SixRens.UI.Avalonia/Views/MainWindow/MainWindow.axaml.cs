@@ -6,18 +6,17 @@ using System;
 using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
-using SixRens.UI.Avalonia.ViewModels.Main;
 
-namespace SixRens.UI.Avalonia.Views
+namespace SixRens.UI.Avalonia.Views.MainWindow
 {
-    public partial class MainWindow : WindowBase<MainWindowViewModel>
+    public partial class MainWindow : Window
     {
         private readonly SixRensCore sixRensCore;
 
-        public MainWindow() : base(new MainWindowViewModel())
+        public MainWindow()
         {
             this.InitializeComponent();
-
+            this.DataContext = new MainWindowViewModel();
             var sixrensSavingsPath = Path.GetFullPath("savings", AppContext.BaseDirectory);
             sixRensCore = new SixRensCore(new(sixrensSavingsPath));
         }

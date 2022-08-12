@@ -1,8 +1,8 @@
 using Avalonia;
 using Avalonia.Controls.ApplicationLifetimes;
 using Avalonia.Markup.Xaml;
-using SixRens.UI.Avalonia.ViewModels;
 using SixRens.UI.Avalonia.Views;
+using SixRens.UI.Avalonia.Views.MainWindow;
 
 namespace SixRens.UI.Avalonia
 {
