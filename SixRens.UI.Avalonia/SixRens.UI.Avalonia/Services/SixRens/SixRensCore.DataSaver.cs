@@ -51,7 +51,7 @@ namespace SixRens.UI.Avalonia.Services.SixRens
             {
                 foreach (var file in this.pluginPackagesDirectory.EnumerateFiles())
                 {
-                    if (file.Extension is not "srspg")
+                    if (file.Extension is not ".srspg")
                         continue;
                     var id = Path.GetFileNameWithoutExtension(file.Name);
                     yield return (id, file.Open(FileMode.Open));
@@ -80,7 +80,7 @@ namespace SixRens.UI.Avalonia.Services.SixRens
             {
                 foreach (var file in this.presetsDirectory.EnumerateFiles())
                 {
-                    if (file.Extension is not "srspt")
+                    if (file.Extension is not ".srspt")
                         continue;
                     var name = Path.GetFileNameWithoutExtension(file.Name);
                     yield return (name, File.ReadAllText(file.FullName, presetContentEncoding));

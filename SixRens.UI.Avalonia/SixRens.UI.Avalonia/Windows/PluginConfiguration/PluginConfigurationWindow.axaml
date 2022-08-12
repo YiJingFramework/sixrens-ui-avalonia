@@ -2,8 +2,27 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        xmlns:vm="using:SixRens.UI.Avalonia.Windows.PluginConfiguration"
+		mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
         x:Class="SixRens.UI.Avalonia.Windows.PluginConfiguration.PluginConfigurationWindow"
-        Title="PluginConfigurationWindow">
-  Welcome to Avalonia!
+		Title="PluginConfigurationWindow"
+		WindowStartupLocation="CenterOwner" >
+	<Design.DataContext>
+		<vm:WindowBindings />
+	</Design.DataContext>
+	
+	<StackPanel Orientation="Vertical">
+		<StackPanel Orientation="Horizontal">
+			<ListBox 
+				Items="{Binding InstalledPackages}"
+				SelectedItem="{Binding SelectedItem}"
+				SelectionMode="Single">
+				<ListBox.ItemTemplate>
+					<DataTemplate>
+						<TextBlock Text="{Binding 名称}"></TextBlock>
+					</DataTemplate>
+				</ListBox.ItemTemplate>
+			</ListBox>
+		</StackPanel>
+	</StackPanel>
 </Window>

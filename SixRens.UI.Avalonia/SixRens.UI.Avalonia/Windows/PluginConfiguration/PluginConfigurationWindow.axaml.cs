@@ -2,6 +2,7 @@ using Avalonia.Controls;
 using Avalonia.Markup.Xaml;
 using SixRens.UI.Avalonia.Services.SixRens;
 using System;
+using System.IO;
 
 namespace SixRens.UI.Avalonia.Windows.PluginConfiguration
 {
@@ -16,6 +17,7 @@ namespace SixRens.UI.Avalonia.Windows.PluginConfiguration
         public PluginConfigurationWindow(SixRensCore core)
         {
             this.InitializeComponent();
+            this.DataContext = new WindowBindings(core);
         }
     }
 }
