@@ -3,7 +3,7 @@ using SixRens.Core.хий╫иЗЁи;
 using System;
 using System.Threading.Tasks;
 
-namespace SixRens.UI.Avalonia.ViewModels
+namespace SixRens.UI.Avalonia.ViewModels.Main
 {
     public class MainWindowViewModel : ViewModelBase
     {

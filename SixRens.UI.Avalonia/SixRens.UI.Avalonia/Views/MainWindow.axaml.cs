@@ -2,11 +2,11 @@ using Avalonia.Controls;
 using Avalonia.Interactivity;
 using SixRens.Core.Õ¼Àý´æÈ¡;
 using SixRens.UI.Avalonia.Services.SixRens;
-using SixRens.UI.Avalonia.ViewModels;
 using System;
 using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
+using SixRens.UI.Avalonia.ViewModels.Main;
 
 namespace SixRens.UI.Avalonia.Views
 {

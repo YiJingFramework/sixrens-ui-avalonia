@@ -16,6 +16,10 @@
   <ItemGroup>
     <Folder Include="Models\" />
     <AvaloniaResource Include="Assets\**" />
+    <Folder Include="ViewModels\插件管理\" />
+    <Folder Include="ViewModels\About\" />
+    <Folder Include="ViewModels\起课\" />
+    <Folder Include="ViewModels\编辑预设\" />
     <None Remove=".gitignore" />
   </ItemGroup>
   <ItemGroup>

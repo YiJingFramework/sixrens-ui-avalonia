@@ -30,12 +30,7 @@
 		</Menu>
 
 		<StackPanel Orientation="Horizontal">
-			<Panel>
-				<TextBlock></TextBlock>
-			</Panel>
-			<StackPanel Orientation="Vertical">
-				<TextBlock></TextBlock>
-			</StackPanel>
 		</StackPanel>
+    
 	</DockPanel>
 </Window>
