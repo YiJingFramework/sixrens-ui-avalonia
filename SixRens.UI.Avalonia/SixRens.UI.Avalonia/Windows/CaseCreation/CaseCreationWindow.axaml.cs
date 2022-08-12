@@ -10,17 +10,12 @@ namespace SixRens.UI.Avalonia.Windows.CaseCreation
         [Obsolete("应该使用有参数构造函数")]
         public CaseCreationWindow()
         {
-            throw new NotImplementedException("应该使用有参数构造函数");
+            this.InitializeComponent();
         }
 
         public CaseCreationWindow(SixRensCore core)
         {
             this.InitializeComponent();
-        }
-
-        private void InitializeComponent()
-        {
-            AvaloniaXamlLoader.Load(this);
         }
     }
 }

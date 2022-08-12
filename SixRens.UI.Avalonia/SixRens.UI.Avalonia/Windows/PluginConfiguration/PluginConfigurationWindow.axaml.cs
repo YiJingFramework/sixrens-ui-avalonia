@@ -10,17 +10,12 @@ namespace SixRens.UI.Avalonia.Windows.PluginConfiguration
         [Obsolete("应该使用有参数构造函数")]
         public PluginConfigurationWindow()
         {
-            throw new NotImplementedException("应该使用有参数构造函数");
+            this.InitializeComponent();
         }
 
         public PluginConfigurationWindow(SixRensCore core)
         {
             this.InitializeComponent();
-        }
-
-        private void InitializeComponent()
-        {
-            AvaloniaXamlLoader.Load(this);
         }
     }
 }

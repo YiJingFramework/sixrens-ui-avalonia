@@ -9,14 +9,6 @@ namespace SixRens.UI.Avalonia.Windows.About
         public AboutWindow()
         {
             this.InitializeComponent();
-#if DEBUG
-            this.AttachDevTools();
-#endif
-        }
-
-        private void InitializeComponent()
-        {
-            AvaloniaXamlLoader.Load(this);
         }
     }
 }
