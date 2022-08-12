@@ -8,7 +8,7 @@ namespace SixRens.UI.Avalonia.Windows.About
     {
         public AboutWindow()
         {
-            InitializeComponent();
+            this.InitializeComponent();
 #if DEBUG
             this.AttachDevTools();
 #endif

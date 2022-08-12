@@ -16,20 +16,20 @@ namespace SixRens.UI.Avalonia.Windows.Main
         private readonly SixRensCore core;
         public MainWindow()
         {
-            InitializeComponent();
+            this.InitializeComponent();
 
             var sixrensSavingsPath = Path.GetFullPath("savings", AppContext.BaseDirectory);
-            core = new SixRensCore(new(sixrensSavingsPath));
+            this.core = new SixRensCore(new(sixrensSavingsPath));
         }
 
         private void CreateCase(object sender, RoutedEventArgs e)
         {
-            _ = new CaseCreationWindow(core).ShowDialog<Õ¼Àý?>(this);
+            _ = new CaseCreationWindow(this.core).ShowDialog<Õ¼Àý?>(this);
         }
 
         private void Configurate(object sender, RoutedEventArgs e)
         {
-            _ = new PluginConfigurationWindow(core).ShowDialog(this);
+            _ = new PluginConfigurationWindow(this.core).ShowDialog(this);
         }
 
         private void DisplayAbout(object sender, RoutedEventArgs e)

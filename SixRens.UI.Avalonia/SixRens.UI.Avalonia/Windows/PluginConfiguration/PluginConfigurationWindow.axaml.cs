@@ -1,4 +1,3 @@
-using Avalonia;
 using Avalonia.Controls;
 using Avalonia.Markup.Xaml;
 using SixRens.UI.Avalonia.Services.SixRens;
@@ -16,7 +15,7 @@ namespace SixRens.UI.Avalonia.Windows.PluginConfiguration
 
         public PluginConfigurationWindow(SixRensCore core)
         {
-            InitializeComponent();
+            this.InitializeComponent();
         }
 
         private void InitializeComponent()
