@@ -1,5 +1,6 @@
 using Avalonia;
-using Avalonia.ReactiveUI;
+using Avalonia.Controls;
+using Avalonia.Controls.ApplicationLifetimes;
 using System;
 
 namespace SixRens.UI.Avalonia
@@ -17,7 +18,6 @@ namespace SixRens.UI.Avalonia
         public static AppBuilder BuildAvaloniaApp()
             => AppBuilder.Configure<App>()
                 .UsePlatformDetect()
-                .LogToTrace()
-                .UseReactiveUI();
+                .LogToTrace();
     }
 }

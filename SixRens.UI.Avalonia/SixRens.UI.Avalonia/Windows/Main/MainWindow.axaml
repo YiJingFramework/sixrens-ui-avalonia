@@ -1,31 +1,24 @@
 <Window xmlns="https://github.com/avaloniaui"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:vm="using:SixRens.UI.Avalonia.Views.MainWindow"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
-        x:Class="SixRens.UI.Avalonia.Views.MainWindow.MainWindow"
-        Icon="/Assets/icon.ico"
+        x:Class="SixRens.UI.Avalonia.Windows.Main.MainWindow"
         Title="SixRens.UI.Avalonia">
-
-    <Design.DataContext>
-        <vm:MainWindowViewModel/>
-    </Design.DataContext>
-	
-	<DockPanel>
+    <DockPanel>
 		<Menu DockPanel.Dock="Top">
 			<MenuItem Header="占例(_C)">
-				<MenuItem Header="起课" HotKey="Ctrl+N" />
+				<MenuItem Header="起课" HotKey="Ctrl+N" Click="CreateCase"/>
 				<Separator/>
-				<MenuItem Header="打开" HotKey="Ctrl+O" Click="OpenDivinationCaseAsync"/>
-				<MenuItem Header="保存" HotKey="Ctrl+S" />
+				<MenuItem Header="打开" HotKey="Ctrl+O" Click="OpenCaseFileAsync"/>
+				<MenuItem Header="保存" HotKey="Ctrl+S"/>
 				<MenuItem Header="另存为" HotKey="Ctrl+Shift+S" />
 			</MenuItem>
 			<MenuItem Header="配置(_S)">
-				<MenuItem Header="预设和插件包" />
+				<MenuItem Header="预设和插件包" Click="Configurate"/>
 			</MenuItem>
 			<MenuItem Header="帮助(_H)">
-				<MenuItem Header="关于" />
+				<MenuItem Header="关于" Click="DisplayAbout"/>
 			</MenuItem>
 		</Menu>
 

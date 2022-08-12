@@ -2,11 +2,11 @@ using Avalonia;
 using Avalonia.Controls;
 using Avalonia.Markup.Xaml;
 
-namespace SixRens.UI.Avalonia.Views.PluginConfigurationWindow
+namespace SixRens.UI.Avalonia.Windows.About
 {
-    public partial class PluginConfigurationWindow : Window
+    public partial class AboutWindow : Window
     {
-        public PluginConfigurationWindow()
+        public AboutWindow()
         {
             InitializeComponent();
 #if DEBUG

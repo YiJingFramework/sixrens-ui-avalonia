@@ -1,8 +1,7 @@
 using Avalonia;
 using Avalonia.Controls.ApplicationLifetimes;
 using Avalonia.Markup.Xaml;
-using SixRens.UI.Avalonia.Views;
-using SixRens.UI.Avalonia.Views.MainWindow;
+using SixRens.UI.Avalonia.Windows.Main;
 
 namespace SixRens.UI.Avalonia
 {
@@ -15,11 +14,11 @@ namespace SixRens.UI.Avalonia
 
         public override void OnFrameworkInitializationCompleted()
         {
-            if (this.ApplicationLifetime is IClassicDesktopStyleApplicationLifetime desktop)
+            if (ApplicationLifetime is IClassicDesktopStyleApplicationLifetime desktop)
             {
                 desktop.MainWindow = new MainWindow();
             }
-            
+
             base.OnFrameworkInitializationCompleted();
         }
     }

@@ -8,7 +8,7 @@ using System.Text;
 
 namespace SixRens.UI.Avalonia.Services.SixRens
 {
-    internal partial class SixRensCore
+    partial class SixRensCore
     {
         private sealed class DataSaver : I插件包管理器储存器, I预设管理器储存器
         {
