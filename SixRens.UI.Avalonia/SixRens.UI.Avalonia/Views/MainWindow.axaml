@@ -11,6 +11,31 @@
     <Design.DataContext>
         <vm:MainWindowViewModel/>
     </Design.DataContext>
-    <TextBlock Text="{Binding Greeting}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+	
+	<DockPanel>
+		<Menu DockPanel.Dock="Top">
+			<MenuItem Header="占例(_C)">
+				<MenuItem Header="起课" HotKey="Ctrl+N" />
+				<Separator/>
+				<MenuItem Header="打开" HotKey="Ctrl+O" Click="OpenDivinationCaseAsync"/>
+				<MenuItem Header="保存" HotKey="Ctrl+S" />
+				<MenuItem Header="另存为" HotKey="Ctrl+Shift+S" />
+			</MenuItem>
+			<MenuItem Header="配置(_S)">
+				<MenuItem Header="预设和插件包" />
+			</MenuItem>
+			<MenuItem Header="帮助(_H)">
+				<MenuItem Header="关于" />
+			</MenuItem>
+		</Menu>
 
+		<StackPanel Orientation="Horizontal">
+			<Panel>
+				<TextBlock></TextBlock>
+			</Panel>
+			<StackPanel Orientation="Vertical">
+				<TextBlock></TextBlock>
+			</StackPanel>
+		</StackPanel>
+	</DockPanel>
 </Window>
